@@ -6,7 +6,7 @@ const getUser = () => Promise.resolve({id: 1, name: "Yauhen"});
 const Search = ({ value, onChange, children }) => (
     <div>
       <label htmlFor="search">{children}</label>
-      <input id="search" type="text" value={value} onChange={onChange} required/>
+      <input id="search" type="text" value={value} onChange={onChange}/>
     </div>
 )
 
@@ -26,7 +26,7 @@ function App() {
   return (
     <div className="App">
         { user && <h2>Logged in as {user.name}</h2> }
-        <img src="" alt="search image" />
+        <img className="image" src="" alt="search image" />
         <Search value={search} onChange={handleChange}>
             Search:
         </Search>
